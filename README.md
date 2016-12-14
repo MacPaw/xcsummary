@@ -38,6 +38,8 @@ xcodebuild test -workspace YourProject.xcworkspace -scheme YourProjectScheme -re
 xcsummary -in <path_to_results>/tests/1_Test/action_TestSummaries.plist -out ~/Desktop/result.html
 ```
 
+![script](/resources/example.gif)
+
 ## Output
 
 [HTML Example](http://htmlpreview.github.io/?https://github.com/MacPaw/xcsummary/blob/master/resources/example/result.html)
