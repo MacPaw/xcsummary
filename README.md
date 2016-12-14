@@ -35,7 +35,7 @@ Tip: we use `-resultBundlePath` parameter in xcodebuild to know the exact locati
 xcodebuild test -workspace YourProject.xcworkspace -scheme YourProjectScheme -resultBundlePath '<path_to_results>' 
 #Here we suggest to browse <path_to_results> folder to check the folders structure.
 #... and generate the report.
-xcsummary -in <path_to_results>/tests/1_Test/action_TestSummaries.plist -out ~/Desktop/result.html
+xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop/result.html
 ```
 
 ![script](/resources/example_cropped.gif)
