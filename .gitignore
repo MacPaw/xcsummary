@@ -27,3 +27,4 @@ xcuserdata/
 *.dSYM
 
 /XCSummary/Templates/TemplateGeneratedHeader.h
+/build/XCSummary.build

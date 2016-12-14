@@ -1,6 +1,6 @@
 //
 //  main.m
-//  summary
+//  xcsummary
 //
 //  Created by Kryvoblotskyi Sergii on 12/13/16.
 //  Copyright © 2016 MacPaw inc. All rights reserved.
