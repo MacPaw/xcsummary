@@ -319,20 +319,24 @@
 		A7B461D81E00171C002B13B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build";
 				DEVELOPMENT_TEAM = S8EX82NJP6;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/XCSummary/Templates";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = xcsummary;
+				SYMROOT = "$(SRCROOT)/build";
 			};
 			name = Debug;
 		};
 		A7B461D91E00171C002B13B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build";
 				DEVELOPMENT_TEAM = S8EX82NJP6;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/XCSummary/Templates";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = xcsummary;
+				SYMROOT = "$(SRCROOT)/build";
 			};
 			name = Release;
 		};
