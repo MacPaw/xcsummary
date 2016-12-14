@@ -50,6 +50,7 @@ xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop
 
 ![screen1](/resources/scr1.png)
 ![screen2](/resources/scr2.png)
+![screen3](/resources/scr3.png)
 
 ## Output
 
