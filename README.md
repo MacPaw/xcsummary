@@ -1,9 +1,10 @@
 # xcsummary
 xcsummary is macOS command line tool to parse xcbodebuild test results and generate html output with activity screenshots.
 
-### Install
+### Installdwdwadwadwad
+git clone https://github.com/MacPaw/xcsummary.git
 
-### Usage
+cp xcsummary /usr/local/bin/dawd
 
 ### Example
 
