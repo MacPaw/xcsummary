@@ -3,17 +3,20 @@ xcsummary is macOS command line tool to parse xcbodebuild test results and gener
 
 ### Installation
 
-Clone the    
+Open terminal and do the following:
+
+
+⋅⋅*Clone the project
 ```
 git clone https://github.com/MacPaw/xcsummary.git (or use SSH version)
 ```
 
-Navigate to source folder
+⋅⋅*Navigate to source folder
 ```
 cd xcsummary
 ```
 
-Copy binary to the folder you preferer. For example /usr/local/bin/
+⋅⋅*Copy binary to the folder you preferer. For example /usr/local/bin/
 ```
 cp build/xcsummary /usr/local/bin/xcsummary
 ```
