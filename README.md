@@ -38,7 +38,7 @@ xcodebuild test -workspace YourProject.xcworkspace -scheme YourProjectScheme -re
 xcsummary -in <path_to_results>/tests/1_Test/action_TestSummaries.plist -out ~/Desktop/result.html
 ```
 
-![script](/resources/example.gif)
+![script](/resources/example_cropped.gif)
 
 ## Output
 
