@@ -48,8 +48,8 @@ xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop
 
 ## Screenshots
 
-![screen1](/resources/screenshot1.png)
-![screen2](/resources/screenshot2.png)
+![screen1](/resources/scr1.png)
+![screen2](/resources/scr2.png)
 
 ## Output
 
