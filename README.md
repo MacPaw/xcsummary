@@ -2,6 +2,12 @@
 
 `xcsummary` is macOS command line tool that parses `xcbodebuild` test results and generates html output with activity screenshots. We use it as a part of our CI Server and find it very usefull and helpfull, so we'd like to share it. 
 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Example](#example)
+* [Output](#output)
+* [Contribution](#contribution)
+
 ## Installation
 
 Open terminal and do the following:
@@ -39,6 +45,11 @@ xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop
 ```
 
 ![script](/resources/example_cropped.gif)
+
+## Screenshots
+
+![screen1](/resources/screenshot1.png)
+![screen2](/resources/screenshot2.png)
 
 ## Output
 
