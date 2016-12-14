@@ -54,7 +54,7 @@ xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop
 
 ## Output
 
-[HTML Example](http://htmlpreview.github.io/?https://github.com/MacPaw/xcsummary/blob/master/resources/example/result.html)
+[Live HTML Example](http://htmlpreview.github.io/?https://github.com/MacPaw/xcsummary/blob/master/resources/example/result.html)
 
 ## Inspiration
 xcsummary is completely inspired by [xcpretty](https://github.com/supermarin/xcpretty), we really love it and use it. But since xcpretty has some [issues](https://github.com/supermarin/xcpretty/issues/251) with screenshots collection, we found our tool is very usefull. 
