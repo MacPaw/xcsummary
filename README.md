@@ -40,6 +40,11 @@ xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop
 
 ![script](/resources/example_cropped.gif)
 
+## Screenshots
+
+![screen1](/resources/screenshot1.png)
+![screen2](/resources/screenshot2.png)
+
 ## Output
 
 [HTML Example](http://htmlpreview.github.io/?https://github.com/MacPaw/xcsummary/blob/master/resources/example/result.html)
