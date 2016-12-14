@@ -47,5 +47,5 @@ xcsummary -in <path_to_results>/1_Test/action_TestSummaries.plist -out ~/Desktop
 ## Inspiration
 xcsummary is completely inspired by [xcpretty](https://github.com/supermarin/xcpretty), we really love it and use it. But since xcpretty has some [issues](https://github.com/supermarin/xcpretty/issues/251) with screenshots collection, we found our tool is very usefull. 
 
-## Inspiration
-Feel free to contribute:)
+## Contribution
+Feel free to open issues and pull requests. 
