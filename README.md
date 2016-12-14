@@ -1,5 +1,5 @@
 ![GitHub Logo](/resources/header.png)
-#
+
 `xcsummary` is macOS command line tool that parses xcbodebuild test results and generates html output with activity screenshots. We use it as a part of our CI Server and find it very usefull and helpfull, so we'd like to share it. 
 
 ## Installation
