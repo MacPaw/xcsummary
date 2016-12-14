@@ -28,7 +28,19 @@ xcsummary -in <path to Summary.plist> -out <path to result html> -show_success (
 
 ### Example
 
+We use `-resultBundlePath` parameter in xcodebuild to know the exact location for every single build.
 ```shell
+#Run your test as usual.
+xcodebuild test -workspace YourProject.xcworkspace -scheme YourProjectScheme -resultBundlePath '<path_to_results>' 
+#Here we suggest to browse <path_to_results> folder to check the folders structure.
+#... and generate the report.
+xcsummary -in <path_to_results>/tests/1_Test/action_TestSummaries.plist -out ~/Desktop/result.html
 ```
 
 ### Output
+
+### Inspiration
+xcsummary is completely inspired by [xcpretty](https://github.com/supermarin/xcpretty), we really love it and use it. But since xcpretty has some [issues](https://github.com/supermarin/xcpretty/issues/251) with screenshots collection, we found our tool is very usefull. 
+
+### Inspiration
+Feel free to contribute:)
