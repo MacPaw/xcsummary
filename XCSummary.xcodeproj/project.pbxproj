@@ -146,10 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7B461D71E00171C002B13B0 /* Build configuration list for PBXNativeTarget "xcsummary" */;
 			buildPhases = (
-				A7BC743F1E005B6F0072AD47 /* ShellScript */,
+				A7BC743F1E005B6F0072AD47 /* Encode Templates */,
 				A7B461CF1E00171C002B13B0 /* Sources */,
 				A7B461D01E00171C002B13B0 /* Frameworks */,
 				A7B461D11E00171C002B13B0 /* CopyFiles */,
+				A701334C1E01AFBC00854391 /* chmod */,
 			);
 			buildRules = (
 			);
@@ -195,13 +196,28 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A7BC743F1E005B6F0072AD47 /* ShellScript */ = {
+		A701334C1E01AFBC00854391 /* chmod */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = chmod;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "chmod 777 build/xcsummary";
+		};
+		A7BC743F1E005B6F0072AD47 /* Encode Templates */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Encode Templates";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
