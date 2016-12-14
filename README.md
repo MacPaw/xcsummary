@@ -1,7 +1,7 @@
 # xcsummary
-xcsummary is macOS command line tool to parse xcbodebuild test results and generate html output with activity screenshots.
+xcsummary is macOS command line tool that parses xcbodebuild test results and generates html output with activity screenshots. We use it as a part of our CI Server and find it very usefull and helpfull, so we'd like to share it. 
 
-### Installation
+## Installation
 
 Open terminal and do the following:
 
@@ -19,16 +19,16 @@ cd xcsummary
 ```shell
 cp build/xcsummary /usr/local/bin/xcsummary
 ```
-### Usage
+## Usage
 
 As easy as pie:
 ```shell
 xcsummary -in <path to Summary.plist> -out <path to result html> -show_success (Optional. Will expand green test cases as well as red)
 ```
 
-### Example
+## Example
 
-We use `-resultBundlePath` parameter in xcodebuild to know the exact location for every single build.
+Tip: we use `-resultBundlePath` parameter in xcodebuild to know the exact location for every single build.
 ```shell
 #Run your test as usual.
 xcodebuild test -workspace YourProject.xcworkspace -scheme YourProjectScheme -resultBundlePath '<path_to_results>' 
@@ -37,10 +37,10 @@ xcodebuild test -workspace YourProject.xcworkspace -scheme YourProjectScheme -re
 xcsummary -in <path_to_results>/tests/1_Test/action_TestSummaries.plist -out ~/Desktop/result.html
 ```
 
-### Output
+## Output
 
-### Inspiration
+## Inspiration
 xcsummary is completely inspired by [xcpretty](https://github.com/supermarin/xcpretty), we really love it and use it. But since xcpretty has some [issues](https://github.com/supermarin/xcpretty/issues/251) with screenshots collection, we found our tool is very usefull. 
 
-### Inspiration
+## Inspiration
 Feel free to contribute:)
