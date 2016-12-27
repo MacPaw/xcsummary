@@ -17,6 +17,10 @@
 @property (nonatomic, copy, readonly) NSString *testName;
 @property (nonatomic, copy, readonly) NSString *testObjectClass;
 
+@property (nonatomic, readonly) NSUInteger numberOfSuccessfulTests;
+@property (nonatomic, readonly) NSUInteger numberOfFailedTests;
+@property (nonatomic, readonly) NSTimeInterval totalDuration;
+
 @property (nonatomic, strong, readonly) NSArray <CMTest *> *tests;
 
 @end

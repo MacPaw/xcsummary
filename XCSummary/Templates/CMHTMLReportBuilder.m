@@ -8,6 +8,7 @@
 
 #import "CMHTMLReportBuilder.h"
 #import "CMTest.h"
+#import "CMTestableSummary.h"
 #import "CMActivitySummary.h"
 #import "TemplateGeneratedHeader.h"
 
@@ -20,6 +21,8 @@
 @property (nonatomic, strong) NSMutableString *resultString;
 @property (nonatomic, strong) NSFileManager *fileManager;
 @property (nonatomic) BOOL showSuccessTests;
+
+@property (nonatomic, strong) NSDateComponentsFormatter *timeFormatter;
 
 @end
 
@@ -41,6 +44,33 @@
         [self _prepareResourceFolder];
     }
     return self;
+}
+
+- (NSDateComponentsFormatter *)timeFormatter
+{
+    if (!_timeFormatter)
+    {
+        NSDateComponentsFormatter *formatter = [NSDateComponentsFormatter new];
+        formatter.unitsStyle = NSDateComponentsFormatterUnitsStyleAbbreviated;
+        formatter.allowedUnits = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+        _timeFormatter = formatter;
+    }
+    return _timeFormatter;
+}
+
+#pragma mark - Public
+
+- (void)appendSummaries:(NSArray <CMTestableSummary *> *)summaries
+{
+    NSUInteger successfullTests = [[summaries valueForKeyPath:@"@sum.numberOfSuccessfulTests"] integerValue];
+    NSUInteger failedTests = [[summaries valueForKeyPath:@"@sum.numberOfFailedTests"] integerValue];
+ 
+    BOOL failuresPresent = failedTests > 0;
+    NSString *templateFormat = [self _decodeTemplateWithName:SummaryTemplate];
+    NSTimeInterval totalTime = [[summaries valueForKeyPath:@"@sum.totalDuration"] doubleValue];
+    NSString *timeString = [self.timeFormatter stringFromTimeInterval:totalTime];
+    NSString *header = [NSString stringWithFormat:templateFormat, successfullTests + failedTests, timeString, successfullTests, failuresPresent ? @"inline": @"none", failedTests];
+    [self.resultString appendString:header];
 }
 
 - (void)appendTests:(NSArray *)tests indentation:(CGFloat)indentation

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CMTest;
+@class CMTestableSummary, CMTest;
 @interface CMHTMLReportBuilder : NSObject
 
 /**
@@ -22,6 +22,13 @@
 - (instancetype)initWithAttachmentsPath:(NSString *)path
                             resultsPath:(NSString *)resultsPath
                        showSuccessTests:(BOOL)showSuccessTests;
+
+/**
+ Appends summaries info as a header
+
+ @param summaries NSArray <CMTestableSummary *> *
+ */
+- (void)appendSummaries:(NSArray <CMTestableSummary *> *)summaries;
 
 /**
  Appends tests to the html template

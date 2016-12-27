@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A723D1D61E128315000F0F65 /* SummaryTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SummaryTemplate.html; sourceTree = "<group>"; };
 		A7B461D31E00171C002B13B0 /* xcsummary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcsummary; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BC741E1E0052640072AD47 /* NSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayAdditions.h; sourceTree = "<group>"; };
 		A7BC741F1E0052640072AD47 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayAdditions.m; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 				A7BC74341E0052640072AD47 /* TestCaseTemplate.html */,
 				A7BC74351E0052640072AD47 /* TestCaseTemplateFailed.html */,
 				A7BC74331E0052640072AD47 /* Template.html */,
+				A723D1D61E128315000F0F65 /* SummaryTemplate.html */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -222,7 +224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\ncd XCSummary/Templates\n\n#!/bin/bash\n\nTemplate=$(openssl base64 -in Template.html | tr -d '\\n')\nActivityTemplateWithoutImage=$(openssl base64 -in ActivityTemplateWithoutImage.html | tr -d '\\n')\nActivityTemplateWithImage=$(openssl base64 -in ActivityTemplateWithImage.html | tr -d '\\n')\nTestCaseTemplate=$(openssl base64 -in TestCaseTemplate.html | tr -d '\\n')\nTestCaseTemplateFailed=$(openssl base64 -in TestCaseTemplateFailed.html | tr -d '\\n')\n\nsed \"s/XCTemplateXC/$Template/g\" TemplateHeader.h > temp.h\nsed \"s/XCActivityTemplateWithoutImageXC/$ActivityTemplateWithoutImage/g\" temp.h > temp1.h\nsed \"s/XCActivityTemplateWithImageXC/$ActivityTemplateWithImage/g\" temp1.h > temp2.h\nsed \"s/XCTestCaseTemplateXC/$TestCaseTemplate/g\" temp2.h > temp3.h\nsed \"s/XCTestCaseTemplateFailedXC/$TestCaseTemplateFailed/g\" temp3.h > TemplateGeneratedHeader.h\n\nrm -rf temp.h\nrm -rf temp1.h\nrm -rf temp2.h\nrm -rf temp3.h";
+			shellScript = "#!/bin/bash\n\ncd XCSummary/Templates\n\n#!/bin/bash\n\nTemplate=$(openssl base64 -in Template.html | tr -d '\\n')\nActivityTemplateWithoutImage=$(openssl base64 -in ActivityTemplateWithoutImage.html | tr -d '\\n')\nActivityTemplateWithImage=$(openssl base64 -in ActivityTemplateWithImage.html | tr -d '\\n')\nTestCaseTemplate=$(openssl base64 -in TestCaseTemplate.html | tr -d '\\n')\nTestCaseTemplateFailed=$(openssl base64 -in TestCaseTemplateFailed.html | tr -d '\\n')\nSummaryTemplate=$(openssl base64 -in SummaryTemplate.html | tr -d '\\n')\n\nsed \"s/XCTemplateXC/$Template/g\" TemplateHeader.h > temp.h\nsed \"s/XCActivityTemplateWithoutImageXC/$ActivityTemplateWithoutImage/g\" temp.h > temp1.h\nsed \"s/XCActivityTemplateWithImageXC/$ActivityTemplateWithImage/g\" temp1.h > temp2.h\nsed \"s/XCTestCaseTemplateXC/$TestCaseTemplate/g\" temp2.h > temp3.h\nsed \"s/XCTestCaseTemplateFailedXC/$TestCaseTemplateFailed/g\" temp3.h > temp4.h\nsed \"s/XCSummaryTemplateXC/$SummaryTemplate/g\" temp4.h > TemplateGeneratedHeader.h\n\nrm -rf temp.h\nrm -rf temp1.h\nrm -rf temp2.h\nrm -rf temp3.h\nrm -rf temp4.h";
 		};
 /* End PBXShellScriptBuildPhase section */
 

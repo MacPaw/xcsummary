@@ -11,3 +11,6 @@
 
 
 #define Template @"XCTemplateXC"
+
+
+#define SummaryTemplate @"XCSummaryTemplateXC"

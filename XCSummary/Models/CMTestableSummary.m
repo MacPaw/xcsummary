@@ -25,8 +25,23 @@
         _tests = [rawTests map:^id(NSDictionary *rawTest, NSUInteger index, BOOL *stop) {
             return [[CMTest alloc] initWithDictionary:rawTest];
         }];
+        _numberOfSuccessfulTests = [self _countOfTests:self.tests withStatus:CMTestStatusSuccess];
+        _numberOfFailedTests = [self _countOfTests:self.tests withStatus:CMTestStatusFailure];
+        _totalDuration = [[self.tests valueForKeyPath:@"@sum.duration"] doubleValue];
     }
     return self;
+}
+
+- (NSInteger)_countOfTests:(NSArray <CMTest *> *)tests withStatus:(CMTestStatus)status
+{
+    __block NSInteger result = 0;
+    [tests enumerateObjectsUsingBlock:^(CMTest * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.status == status) {
+            result++;
+        }
+        result += [self _countOfTests:obj.subTests withStatus:status];
+    }];
+    return result;
 }
 
 - (NSString *)description

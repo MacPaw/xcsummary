@@ -41,6 +41,7 @@ int main(int argc, const char * argv[]) {
         CMHTMLReportBuilder *builder = [[CMHTMLReportBuilder alloc] initWithAttachmentsPath:attachmentsPath
                                                                                 resultsPath:output.stringByExpandingTildeInPath
                                                                            showSuccessTests:showSuccess];
+        [builder appendSummaries:summaries];
         [summaries enumerateObjectsUsingBlock:^(CMTestableSummary *summary, NSUInteger idx, BOOL * _Nonnull stop) {
             [builder appendTests:summary.tests indentation:10.0f];
         }];
