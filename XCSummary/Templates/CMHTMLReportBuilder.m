@@ -84,22 +84,29 @@
         }
         else
         {
-            [self _appendBeginingForTest:obj];
             if (self.showSuccessTests == NO)
             {
                 if (obj.status == CMTestStatusFailure)
                 {
-                    [self _appendActivities:obj.activities indentation:indentation + 50];
+                    [self appendTest:obj indentation:indentation];
                 }
             }
             else
             {
-                [self _appendActivities:obj.activities indentation:indentation + 50];
+                [self appendTest:obj indentation:indentation];
             }
-            [self _appendEndForTest:obj];
+            
         }
     }];
 }
+
+- (void)appendTest:(CMTest *)test indentation:(CGFloat)indentation
+{
+    [self _appendBeginingForTest:test];
+    [self _appendActivities:test.activities indentation:indentation + 50];
+    [self _appendEndForTest:test];
+}
+
 - (NSString *)build
 {
     NSString *templateFormat = [self _decodeTemplateWithName:Template];
