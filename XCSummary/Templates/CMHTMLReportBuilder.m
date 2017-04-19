@@ -88,16 +88,25 @@
             {
                 if (obj.status == CMTestStatusFailure)
                 {
-                    [self _appendActivities:obj.activities indentation:indentation + 50];
+                    [self appendTest:obj indentation:indentation];
                 }
             }
             else
             {
-                [self _appendActivities:obj.activities indentation:indentation + 50];
+                [self appendTest:obj indentation:indentation];
             }
+            
         }
     }];
 }
+
+- (void)appendTest:(CMTest *)test indentation:(CGFloat)indentation
+{
+    [self _appendBeginingForTest:test];
+    [self _appendActivities:test.activities indentation:indentation + 50];
+    [self _appendEndForTest:test];
+}
+
 - (NSString *)build
 {
     NSString *templateFormat = [self _decodeTemplateWithName:Template];
@@ -118,7 +127,7 @@
     NSString *templateFormat = testCase.status == CMTestStatusFailure ?
     [self _decodeTemplateWithName:TestCaseTemplateFailed] :
     [self _decodeTemplateWithName:TestCaseTemplate];
-    NSString *composedString = [NSString stringWithFormat:templateFormat, indentation, @"px", testCase.testName, testCase.duration];
+    NSString *composedString = [NSString stringWithFormat:templateFormat, indentation, @"px", testCase.testName, testCase.testName, testCase.duration];
     [self.resultString appendString:composedString];
 }
 
@@ -152,6 +161,17 @@
     }
     
     [self.resultString appendString:composedString];
+}
+
+- (void)_appendBeginingForTest:(CMTest *)test
+{
+    NSString *testBegining = [NSString stringWithFormat:@"<div id=\"%@\" style=\"display: none\" margin-left: 10.00px; background-color: #CBF4A3; padding:10px; text-align: right;", test.testName];
+    [self.resultString appendString:testBegining];
+}
+
+- (void)_appendEndForTest:(CMTest *)test
+{
+    [self.resultString appendString:@"</div>"];
 }
 
 #pragma mark - File Operations
