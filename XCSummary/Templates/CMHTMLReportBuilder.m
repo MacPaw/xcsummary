@@ -152,15 +152,15 @@
         [self.fileManager copyItemAtPath:fullPath toPath:[self.htmlResourcePath stringByAppendingPathComponent:imageName] error:nil];
         
         NSString *localImageName = [NSString stringWithFormat:@"resources/Screenshot_%@.png", activity.uuid.UUIDString];
-        composedString = [NSString stringWithFormat:templateFormat, indentation, @"px", activity.title, activity.finishTimeInterval - activity.startTimeInterval, localImageName];
+        composedString = [NSString stringWithFormat:templateFormat, activity.title, activity.finishTimeInterval - activity.startTimeInterval, localImageName, localImageName];
+        
+        [self.resultString appendString:composedString];
     }
     else
     {
-        templateFormat = [self _decodeTemplateWithName:ActivityTemplateWithoutImage];
-        composedString = [NSString stringWithFormat:templateFormat, indentation, @"px", activity.title, activity.finishTimeInterval - activity.startTimeInterval];
+//        templateFormat = [self _decodeTemplateWithName:ActivityTemplateWithoutImage];
+//        composedString = [NSString stringWithFormat:templateFormat, indentation, @"px", activity.title, activity.finishTimeInterval - activity.startTimeInterval];
     }
-    
-    [self.resultString appendString:composedString];
 }
 
 - (void)_appendBeginingForTest:(CMTest *)test
