@@ -134,10 +134,13 @@
 {
     NSString *templateFormat = nil;
     NSString *composedString = nil;
-    if (activity.hasScreenshotData)
+    CMAttachment *attachment = nil;
+    
+    attachment = [activity.attachments firstObject];
+    
+    if (activity.hasScreenshotData && attachment)
     {
         templateFormat = [self _decodeTemplateWithName:ActivityTemplateWithImage];
-        CMAttachment *attachment = [activity.attachments firstObject];
         NSString *imageName = [NSString stringWithFormat:@"%@", attachment.filename];
         NSString *fullPath = [self.path stringByAppendingPathComponent:imageName];
         
