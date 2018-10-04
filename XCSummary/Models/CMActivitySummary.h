@@ -7,6 +7,7 @@
 //
 
 #import "CMEntity.h"
+#import "CMAttachment.h"
 
 @interface CMActivitySummary : CMEntity
 
@@ -20,5 +21,6 @@
 @property (nonatomic, readonly) BOOL hasScreenshotData;
 
 @property (nonatomic, strong, readonly) NSArray <CMActivitySummary *> *subActivities;
+@property (nonatomic, strong, readonly) NSArray <CMAttachment *> *attachments;
 
 @end
