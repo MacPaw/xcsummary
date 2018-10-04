@@ -15,6 +15,7 @@
 		A7BC743B1E0052640072AD47 /* CMTestableSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC74291E0052640072AD47 /* CMTestableSummary.m */; };
 		A7BC743C1E0052640072AD47 /* CMTestSummaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC742C1E0052640072AD47 /* CMTestSummaryParser.m */; };
 		A7BC743D1E0052640072AD47 /* CMHTMLReportBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC74321E0052640072AD47 /* CMHTMLReportBuilder.m */; };
+		CB3DCA592165270000DA9D8C /* CMAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3DCA582165270000DA9D8C /* CMAttachment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		A7BC74331E0052640072AD47 /* Template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Template.html; sourceTree = "<group>"; };
 		A7BC74341E0052640072AD47 /* TestCaseTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestCaseTemplate.html; sourceTree = "<group>"; };
 		A7BC74351E0052640072AD47 /* TestCaseTemplateFailed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestCaseTemplateFailed.html; sourceTree = "<group>"; };
+		CB3DCA57216525E300DA9D8C /* CMAttachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAttachment.h; sourceTree = "<group>"; };
+		CB3DCA582165270000DA9D8C /* CMAttachment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAttachment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				A7BC74271E0052640072AD47 /* CMTest.m */,
 				A7BC74241E0052640072AD47 /* CMEntity.h */,
 				A7BC74251E0052640072AD47 /* CMEntity.m */,
+				CB3DCA57216525E300DA9D8C /* CMAttachment.h */,
+				CB3DCA582165270000DA9D8C /* CMAttachment.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				A7BC743D1E0052640072AD47 /* CMHTMLReportBuilder.m in Sources */,
 				A7BC74371E0052640072AD47 /* main.m in Sources */,
 				A7BC74381E0052640072AD47 /* CMActivitySummary.m in Sources */,
+				CB3DCA592165270000DA9D8C /* CMAttachment.m in Sources */,
 				A7BC743C1E0052640072AD47 /* CMTestSummaryParser.m in Sources */,
 				A7BC743B1E0052640072AD47 /* CMTestableSummary.m in Sources */,
 				A7BC74391E0052640072AD47 /* CMEntity.m in Sources */,
