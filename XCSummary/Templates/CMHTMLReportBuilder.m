@@ -137,12 +137,13 @@
     if (activity.hasScreenshotData)
     {
         templateFormat = [self _decodeTemplateWithName:ActivityTemplateWithImage];
-        NSString *imageName = [NSString stringWithFormat:@"Screenshot_%@.png", activity.uuid.UUIDString];
+        CMAttachment *attachment = [activity.attachments firstObject];
+        NSString *imageName = [NSString stringWithFormat:@"%@", attachment.filename];
         NSString *fullPath = [self.path stringByAppendingPathComponent:imageName];
         
         [self.fileManager copyItemAtPath:fullPath toPath:[self.htmlResourcePath stringByAppendingPathComponent:imageName] error:nil];
         
-        NSString *localImageName = [NSString stringWithFormat:@"resources/Screenshot_%@.png", activity.uuid.UUIDString];
+        NSString *localImageName = [NSString stringWithFormat:@"resources/%@", imageName];
         composedString = [NSString stringWithFormat:templateFormat, indentation, @"px", activity.title, activity.finishTimeInterval - activity.startTimeInterval, localImageName];
     }
     else
