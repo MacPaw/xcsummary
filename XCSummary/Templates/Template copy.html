@@ -1,0 +1,14 @@
+<script language="javascript">
+function toggle(contentDiv) {
+	var block = document.getElementById(contentDiv);
+	if(block.style.display == "block") {
+    		block.style.display = "none";
+  	}
+	else {
+		block.style.display = "block";
+	}
+}
+</script>
+
+<div onclick="javascript:toggle('toggleText');"><h1>11111</h1></div>
+<div id="toggleText" style="display: none"><h1>peek-a-boo</h1></div>
