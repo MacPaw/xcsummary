@@ -23,7 +23,6 @@
         _uuid = [[NSUUID alloc] initWithUUIDString:uuidString];
         _startTimeInterval = [dictionary[@"StartTimeInterval"] doubleValue];
         _finishTimeInterval = [dictionary[@"FinishTimeInterval"] doubleValue];
-        _hasScreenshotData = [dictionary[@"HasScreenshotData"] boolValue];
         _hasElementsOfInterest = [dictionary[@"HasElementsOfInterest"] boolValue];
         _subActivities = [subActivitesInfo map:^id(NSDictionary *activityInfo, NSUInteger index, BOOL *stop) {
             return [[CMActivitySummary alloc] initWithDictionary:activityInfo];

@@ -18,7 +18,6 @@
 @property (nonatomic, readonly) NSTimeInterval finishTimeInterval;
 
 @property (nonatomic, readonly) BOOL hasElementsOfInterest;
-@property (nonatomic, readonly) BOOL hasScreenshotData;
 
 @property (nonatomic, strong, readonly) NSArray <CMActivitySummary *> *subActivities;
 @property (nonatomic, strong, readonly) NSArray <CMAttachment *> *attachments;

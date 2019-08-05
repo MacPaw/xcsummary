@@ -138,7 +138,7 @@
     
     attachment = [activity.attachments firstObject];
     
-    if (activity.hasScreenshotData && attachment)
+    if (attachment)
     {
         templateFormat = [self _decodeTemplateWithName:ActivityTemplateWithImage];
         NSString *imageName = [NSString stringWithFormat:@"%@", attachment.filename];
